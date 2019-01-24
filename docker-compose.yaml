@@ -35,9 +35,3 @@ services:
     ports:
       - 5432:5432
     restart: always
-  
-  adminer: 
-    image: adminer 
-    ports:
-      - 8888:8888
-    restart: always
