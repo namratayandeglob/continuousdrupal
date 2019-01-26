@@ -1,14 +1,15 @@
 version: '3'
 services:
   db:
-    image: postgres:10
+    image: mariadb:10.2
     environment:
-      POSTGRES_DATABASE: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: example
-      POSTGRES_ROOT_PASSWORD: root
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PORT: 3306
     volumes:
-      - db_data:/var/lib/postgresql
+      - ./db_data:/var/lib/mysql
     restart: always
   drupal:
     depends_on:
@@ -19,5 +20,3 @@ services:
     volumes:
       - ./app:/app
     restart: always
-volumes:
-  db_data:

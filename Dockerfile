@@ -3,7 +3,7 @@ FROM drupal:8.4-apache
 RUN apt-get update && apt-get install -y \
 	curl \
 	git \
-	postgresql-10 \
+	mysql-client \
 	vim \
 	wget
 
