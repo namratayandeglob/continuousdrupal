@@ -1,0 +1,5 @@
+#Composer vendor
+db_data/
+db_data/*
+
+.DS_Store
